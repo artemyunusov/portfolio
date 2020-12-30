@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/styles.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <title>Portfolio</title>
+</head>
+
+<body>
+
+  <svg style="display: none;">
+    <symbol id="vk" viewbox="0 0 24 24">
+      <g>
+        <path
+          d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z" />
+  
+  
+      </g>
+    </symbol>
+  
+    <symbol id="fb" viewbox="-21 -21 682.66669 682.66669">
+      <g>
+        <path
+          d="m604.671875 0h-569.375c-19.496094.0117188-35.30078125 15.824219-35.296875 35.328125v569.375c.0117188 19.496094 15.824219 35.300781 35.328125 35.296875h306.546875v-247.5h-83.125v-96.875h83.125v-71.292969c0-82.675781 50.472656-127.675781 124.222656-127.675781 35.324219 0 65.679688 2.632812 74.527344 3.808594v86.410156h-50.855469c-40.125 0-47.894531 19.066406-47.894531 47.050781v61.699219h95.9375l-12.5 96.875h-83.4375v247.5h162.796875c19.507813.003906 35.324219-15.804688 35.328125-35.3125 0-.003906 0-.007812 0-.015625v-569.375c-.007812-19.496094-15.824219-35.30078125-35.328125-35.296875zm0 0" />
+  
+  
+      </g>
+    </symbol>
+  
+    <symbol id="insta" viewbox="0 0 512 512">
+      <g>
+        <path
+          d="m256 150.5c-58.171875 0-105.5 47.328125-105.5 105.5s47.328125 105.5 105.5 105.5 105.5-47.328125 105.5-105.5-47.324219-105.5-105.5-105.5zm0 0" />
+        <path
+          d="m460.410156 51.589844c-33.269531-33.269532-77.332031-51.589844-124.074218-51.589844h-160.671876c-46.742187 0-90.808593 18.320312-124.074218 51.589844-33.269532 33.265625-51.589844 77.332031-51.589844 124.074218v160.667969c0 46.746094 18.320312 90.8125 51.589844 124.078125 33.265625 33.269532 77.332031 51.589844 124.074218 51.589844h160.671876c46.742187 0 90.808593-18.320312 124.074218-51.589844 33.265625-33.265625 51.589844-77.332031 51.589844-124.078125v-160.667969c0-46.742187-18.324219-90.808593-51.589844-124.074218zm-204.410156 339.910156c-74.714844 0-135.5-60.785156-135.5-135.5s60.785156-135.5 135.5-135.5 135.5 60.785156 135.5 135.5-60.785156 135.5-135.5 135.5zm150.109375-264.394531c-2.789063 2.789062-6.660156 4.390625-10.605469 4.390625-3.949218 0-7.8125-1.601563-10.601562-4.390625-2.800782-2.792969-4.398438-6.660157-4.398438-10.609375 0-3.949219 1.597656-7.820313 4.398438-10.609375 2.789062-2.792969 6.648437-4.390625 10.601562-4.390625 3.945313 0 7.816406 1.597656 10.605469 4.390625 2.792969 2.789062 4.394531 6.660156 4.394531 10.609375 0 3.945312-1.601562 7.816406-4.394531 10.609375zm0 0" />
+      </g>
+    </symbol>
+  
+    <symbol id="close" viewbox="0 0 512.001 512.001">
+      <g>
+        <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+  			L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+  			c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+  			l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+  			L284.286,256.002z" />
+      </g>
+    </symbol>
+  
+    <symbol id="front" viewbox="0 0 64 64">
+      <g>
+        <path
+          d="M59,14H48V3a1,1,0,0,0-1-1H17a1,1,0,0,0-1,1V14H5a3.009,3.009,0,0,0-3,3V49a3.009,3.009,0,0,0,3,3H24.82l-.67,4H23a1.014,1.014,0,0,0-.8.4l-3,4A1,1,0,0,0,20,62H44a1,1,0,0,0,.8-1.6l-3-4A1.014,1.014,0,0,0,41,56H39.85l-.67-4H59a3.009,3.009,0,0,0,3-3V17A3.009,3.009,0,0,0,59,14ZM18,4H46V24H18ZM40.5,58,42,60H22l1.5-2ZM26.18,56l.67-4h10.3l.67,4ZM60,49a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V46H60Zm0-5H4V17a1,1,0,0,1,1-1H16v9a1,1,0,0,0,1,1H47a1,1,0,0,0,1-1V16H59a1,1,0,0,1,1,1Z" />
+        <path
+          d="M57,28H45a1,1,0,0,0-1,1v1H36V29a1,1,0,0,0-1-1H29a1,1,0,0,0-1,1v1H20V29a1,1,0,0,0-1-1H7a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V32h8v1a1,1,0,0,0,1,1h2v2H29a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V37a1,1,0,0,0-1-1H33V34h2a1,1,0,0,0,1-1V32h8v1a1,1,0,0,0,1,1H57a1,1,0,0,0,1-1V29A1,1,0,0,0,57,28ZM18,32H8V30H18Zm16,6v2H30V38Zm0-6H30V30h4Zm22,0H46V30H56Z" />
+        <path d="M26.293,7.293l-6,6a1,1,0,0,0,0,1.414l6,6,1.414-1.414L22.414,14l5.293-5.293Z" />
+        <path d="M37.707,7.293,36.293,8.707,41.586,14l-5.293,5.293,1.414,1.414,6-6a1,1,0,0,0,0-1.414Z" />
+      </g>
+    </symbol>
+  
+    <symbol id="layer" viewbox="0 0 512.001 512.001">
+      <g>
+        <path d="M512,256.001c0-10.821-6.012-20.551-15.694-25.398l-38.122-19.061l38.122-19.06c0.001-0.001,0.004-0.002,0.004-0.002
+  			c9.68-4.845,15.692-14.576,15.692-25.397c0-10.819-6.013-20.55-15.694-25.397L281.09,34.08
+  			c-15.712-7.849-34.47-7.849-50.185,0.001L15.691,141.691C6.013,146.534,0,156.264,0,167.084c0,10.821,6.012,20.551,15.694,25.398
+  			l38.121,19.06l-38.126,19.063C6.012,235.45,0,245.18,0,256.001s6.012,20.551,15.694,25.397l38.121,19.061l-38.118,19.059
+  			C6.02,324.353,0.004,334.08,0,344.902c-0.004,10.828,6.008,20.564,15.694,25.412l215.215,107.608
+  			c7.856,3.925,16.471,5.886,25.09,5.886c8.619,0,17.238-1.963,25.095-5.887l215.215-107.608
+  			c9.682-4.845,15.695-14.582,15.691-25.41c-0.004-10.822-6.02-20.549-15.694-25.381l-38.122-19.061l38.126-19.063
+  			C505.988,276.552,512,266.822,512,256.001z M26.225,171.431c-2.339-1.171-2.687-3.226-2.687-4.346s0.35-3.175,2.683-4.343
+  			L241.429,55.138c4.563-2.28,9.568-3.418,14.573-3.418c5.003,0,10.007,1.139,14.567,3.417L485.776,162.74
+  			c2.337,1.17,2.687,3.225,2.687,4.345s-0.348,3.175-2.687,4.346L270.572,279.032c-9.125,4.558-20.019,4.558-29.139,0.001
+  			L26.225,171.431z M485.783,340.575c2.33,1.164,2.679,3.215,2.679,4.336c0.001,1.123-0.348,3.182-2.683,4.35L270.571,456.865
+  			c-9.125,4.558-20.019,4.559-29.139,0.001L26.225,349.262c-2.339-1.171-2.688-3.229-2.687-4.352c0-1.119,0.348-3.171,2.683-4.337
+  			l53.912-26.956l150.776,75.387c7.856,3.925,16.471,5.886,25.089,5.886c8.619,0,17.238-1.963,25.095-5.887l150.772-75.386
+  			L485.783,340.575z M485.778,260.345L270.571,367.949c-9.125,4.558-20.019,4.559-29.139,0.001L26.225,260.347
+  			c-2.339-1.17-2.687-3.225-2.687-4.345c0-1.122,0.348-3.175,2.683-4.344l53.912-26.956l150.776,75.387
+  			c7.855,3.925,16.472,5.886,25.089,5.886c8.617,0,17.237-1.962,25.094-5.888l150.774-75.386l53.908,26.954
+  			c2.339,1.171,2.687,3.225,2.687,4.346C488.462,257.121,488.113,259.176,485.778,260.345z" />
+      </g>
+    </symbol>
+  
+    <symbol id="data" viewbox="0 0 64 64">
+      <g>
+        <path
+          d="m61 2h-30a1 1 0 0 0 -1 1v13h-23a5 5 0 0 0 -5 5v26a5 5 0 0 0 5 5h12v4h-1a3.009 3.009 0 0 0 -3 3v2a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a3.009 3.009 0 0 0 -3-3h-1v-4h12a5 5 0 0 0 5-5v-19h13a1 1 0 0 0 1-1v-24a1 1 0 0 0 -1-1zm-29 56a1 1 0 0 1 1 1v1h-16v-1a1 1 0 0 1 1-1zm-11-2v-4h8v4zm25-9a3.009 3.009 0 0 1 -3 3h-36a3.009 3.009 0 0 1 -3-3v-1h42zm0-3h-42v-23a3.009 3.009 0 0 1 3-3h23v9a1 1 0 0 0 1 1h15zm14-18h-28v-22h28z" />
+        <path d="m17 20a11 11 0 1 0 11 11 11.013 11.013 0 0 0 -11-11zm0 20a9 9 0 1 1 9-9 9.01 9.01 0 0 1 -9 9z" />
+        <path
+          d="m17 28a1 1 0 0 1 1 1h2a3 3 0 0 0 -2-2.816v-1.184h-2v1.184a2.993 2.993 0 0 0 1 5.816 1 1 0 1 1 -1 1h-2a3 3 0 0 0 2 2.816v1.184h2v-1.184a2.993 2.993 0 0 0 -1-5.816 1 1 0 0 1 0-2z" />
+        <path
+          d="m61.77 36.36-5-6a1.032 1.032 0 0 0 -1.54 0l-5 6a1 1 0 0 0 .77 1.64h2v23a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-23h2a1 1 0 0 0 .77-1.64zm-3.77-.36a1 1 0 0 0 -1 1v23h-2v-23a1 1 0 0 0 -1-1h-.87l2.87-3.44 2.87 3.44z" />
+        <path
+          d="m27.64 7.23-6-5a1 1 0 0 0 -1.64.77v2h-17a1 1 0 0 0 -1 1v4a1 1 0 0 0 1 1h17v2a1 1 0 0 0 .58.91 1.023 1.023 0 0 0 .42.09 1 1 0 0 0 .64-.23l6-5a1 1 0 0 0 0-1.54zm-5.64 3.63v-.86a1 1 0 0 0 -1-1h-17v-2h17a1 1 0 0 0 1-1v-.86l3.44 2.86z" />
+        <path d="m36 24h4a1 1 0 0 0 1-1v-8a1 1 0 0 0 -1-1h-4a1 1 0 0 0 -1 1v8a1 1 0 0 0 1 1zm1-8h2v6h-2z" />
+        <path d="m44 24h4a1 1 0 0 0 1-1v-12a1 1 0 0 0 -1-1h-4a1 1 0 0 0 -1 1v12a1 1 0 0 0 1 1zm1-12h2v10h-2z" />
+        <path d="m52 24h4a1 1 0 0 0 1-1v-16a1 1 0 0 0 -1-1h-4a1 1 0 0 0 -1 1v16a1 1 0 0 0 1 1zm1-16h2v14h-2z" />
+        <path d="m30 30h4v2h-4z" />
+        <path d="m36 30h6v2h-6z" />
+        <path d="m30 34h4v2h-4z" />
+        <path d="m36 34h6v2h-6z" />
+        <path d="m30 38h4v2h-4z" />
+        <path d="m36 38h6v2h-6z" />
+      </g>
+    </symbol>
+  
+    <symbol id="right" viewbox="0 0 511.995 511.995">
+      <g>
+        <path d="M381.039,248.62L146.373,3.287c-4.083-4.229-10.833-4.417-15.083-0.333c-4.25,4.073-4.396,10.823-0.333,15.083
+  			L358.56,255.995L130.956,493.954c-4.063,4.26-3.917,11.01,0.333,15.083c2.063,1.979,4.729,2.958,7.375,2.958
+  			c2.813,0,5.604-1.104,7.708-3.292L381.039,263.37C384.977,259.245,384.977,252.745,381.039,248.62z" />
+      </g>
+    </symbol>
+  
+  </svg>
+  <div class="page">
+
+    <!-- header -->
+    <header class="header">
+    	<div class="container">
+    		<div class="header__inner">
+    			<div class="row header__row">
+    
+    				<div class="col-lg-2"><a class="logo" href="index.html"><span class="logo__prefix">in</span>Web</a></div>
+    					<div class="col-lg-8">
+    						<nav class="nav">
+    							<a class="nav__link" href="index.html">главная</a>
+    							<a class="nav__link" href="services.html">услуги</a>
+    							<a class="nav__link" href="portfolio.html">портфолио</a>
+    						</nav>
+    					</div>
+    
+    					<div class="col-lg-2">
+    						<div class="lang">
+    							<a class="lang__item" href="">en</a>
+    							<a class="lang__item" href="">ru</a>
+    						</div>
+    					</div>
+    
+    			</div><!-- /row -->
+    		</div><!-- /header__inner -->
+    	</div><!-- /container -->
+    </header>
+
+    <!-- content -->
+    <div class="content">
+      
+      <div class="container">
+      
+        <h1 class="content__title">Мои работы</h1>
+        <div class="portfolio">
+          <button class="portfolio__arrow portfolio__arrow--left" id="portfolio__arrow--left" type="button">
+      
+            <svg class="portfolio__arrow-icon">
+              <use xlink:href="#right">
+            </svg>
+      
+          </button>
+          <button class="portfolio__arrow portfolio__arrow--right" id="portfolio__arrow--right" type="button">
+      
+            <svg class="portfolio__arrow-icon">
+              <use xlink:href="#right">
+            </svg>
+      
+          </button>
+          <div class="portfolio__slider" id="portfolio">
+            <div class="portfolio__item">
+              <a class="portfolio__link" href="#" target="_blank">
+                <img class="portfolio__img" src="./assets/images/portfolio/1.jpg" alt="">
+              </a>
+              <div class="portfolio__title">Some text</div>
+            </div>
+      
+            <div class="portfolio__item">
+              <a class="portfolio__link" href="#" target="_blank">
+                <img class="portfolio__img" src="./assets/images/portfolio/2.jpg" alt="">
+              </a>
+              <div class="portfolio__title">Some text</div>
+            </div>
+      
+            <div class="portfolio__item">
+              <a class="portfolio__link" href="#" target="_blank">
+                <img class="portfolio__img" src="./assets/images/portfolio/1.jpg" alt="">
+              </a>
+              <div class="portfolio__title">Some text</div>
+            </div>
+      
+            <div class="portfolio__item">
+              <a class="portfolio__link" href="#" target="_blank">
+                <img class="portfolio__img" src="./assets/images/portfolio/2.jpg" alt="">
+              </a>
+              <div class="portfolio__title">Some text</div>
+            </div>
+      
+          </div> <!-- #portfolio -->
+        </div> <!-- /portfolio -->
+      </div><!-- /container -->
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="social">
+    
+          <div class="social__text">Мои соц сети</div>
+    
+          <a class="social__link" href="#" target="_blank">
+            <svg class="social__icon">
+              <use xlink: href="#vk"></use>
+            </svg>
+          </a>
+          <a class="social__link" href="#" target="_blank">
+            <svg class="social__icon social__icon--fb">
+              <use xlink: href="#fb"></use>
+            </svg>
+          </a>
+          <a class="social__link" href="#" target="_blank">
+            <svg class="social__icon social__icon--fb">
+              <use xlink: href="#insta"></use>
+            </svg>
+          </a>
+    
+        </div> <!-- /social -->
+      </div> <!-- /container -->
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="request_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+  
+        <button type="button" class="modal__close" data-dismiss="modal" aria-label="Close">
+          <svg class="modal__close-icon">
+            <use xlink: href="#close">
+          </svg>
+        </button>
+  
+        <div class="modal__title">оставить заявку</div>
+        <div class="modal__text">заполните форму и мы свяжемся с вами</div>
+  
+        <form class="form" action="/" method="post">
+  
+          <div class="form__group">
+            <input class="input" type="text" placeholder="Ваше имя">
+          </div>
+          <div class="form__group">
+            <input class="input" type="email" placeholder="Ваш э-маил">
+          </div>
+          <div class="form__group">
+            <input class="input" type="tel" placeholder="Ваш номер телефона">
+          </div>
+  
+          <div class="row">
+  
+            <div class="col-lg-6">
+              <button class="btn btn--pink" type="submit">оставить заявку</button>
+            </div>
+            <div class="col-lg-6">
+              <ul class="contacts contacts--modal">
+                <li class="contacts__item">
+                  <a class="contacts__link" href="tel:+998974489700">+998974489700</a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="mailto:mirabbos1249@gmail.com">mirabbos1249@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+  
+          </div> <!-- /row -->
+  
+        </form> <!-- /form -->
+  
+      </div> <!-- modal-content -->
+    </div> <!-- /modal-dialog -->
+  </div>
+  <script src="./assets/js/app.js"></script>  
+  <script src="./assets/js/script.js"></script>  
+</body>
+
+</html>
